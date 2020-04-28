@@ -28,7 +28,7 @@ const Activate = ({ match }) => {
         event.preventDefault();
         axios({
             method: 'POST',
-            url: `http://localhost:8000/api/account-activation`,
+            url: `${process.env.REACT_APP_API}/account-activation`,
             data: { token }
         })
             .then(response => {
