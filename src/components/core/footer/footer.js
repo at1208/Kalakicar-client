@@ -14,10 +14,9 @@ const Footer  = () => {
              </div>
 
              <div className='col-md-6'>
+
                    <div className='text-center icons'>
-                       <AiFillInstagram className='kkc-social insta-icon'/>
-                       <FaTwitter className='kkc-social twitter-icon' />
-                       <FaFacebook className='kkc-social fb-icon'/>
+                       <a href="https://instagram.com/kalakicar"><AiFillInstagram className='kkc-social insta-icon'/></a>
                    </div>
 
              </div>

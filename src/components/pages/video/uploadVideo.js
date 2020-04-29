@@ -63,6 +63,7 @@ this.setState({ videoUploadButtonClicked: true })
   data.append('file',files);
   axios.post(`${process.env.REACT_APP_API}/upload`,data)
   .then(res => {
+    console.log(res)
     this.setState({ videoUrl: res.data.data[0].url })
     if(this.state.videoUrl){
       toast.success(res.data.message)
@@ -133,8 +134,7 @@ axios({
 
 render(){
 
-  console.log(this.state.videoUrl)
-    console.log(this.state.videoThumbnailUrl)
+
   return <>
       <Header />
       <ToastContainer />

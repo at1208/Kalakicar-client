@@ -10,8 +10,8 @@ const Team = [
   { img: "https://res.cloudinary.com/denjmsbaw/image/upload/v1583845495/chirag_fhogjp.jpg", name: "Chirag Rajput", designation: "Founder" },
   { img: 'https://res.cloudinary.com/denjmsbaw/image/upload/v1583845495/Shwetansh_it7xdu.jpg', name: 'Shwetansh Gaur', designation: "Founder" },
   { img: 'https://res.cloudinary.com/denjmsbaw/image/upload/v1583845496/tushar_p0c50n.jpg', name: 'Tushar Rajput', designation: "Founder" },
-  { img: 'https://res.cloudinary.com/denjmsbaw/image/upload/v1583845495/Soumya_uk6sgs.jpg', name: 'Soumya Kandari', designation: 'Content Head' },
-  { img: 'https://res.cloudinary.com/denjmsbaw/image/upload/v1583845496/shristi_qgpmqu.jpg', name: 'Shristi', designation: 'Promotion Head' }
+  { img: 'https://res.cloudinary.com/denjmsbaw/image/upload/v1583845495/Soumya_uk6sgs.jpg', name: 'Soumya Kandari', designation: 'Promotion manager' },
+  { img: 'https://res.cloudinary.com/denjmsbaw/image/upload/v1583845496/shristi_qgpmqu.jpg', name: 'Shristi', designation: 'Event manager' }
 ]
 const teamProfile = () => {
  return Team.map( item => {

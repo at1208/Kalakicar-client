@@ -80,9 +80,9 @@ const navStyle = () => {
                        </Link>
                )}
 
-               {!isTabletOrMobileDevice && <Link to="/voting" className="header-menu" style={isActive('/voting')}>
+               {/*!isTabletOrMobileDevice && <Link to="/voting" className="header-menu" style={isActive('/voting')}>
                  VOTING
-                 </Link>}
+                 </Link>*/}
 
                  {isAuth()  && !isTabletOrMobileDevice && isAuth().role === 'admin' && (
                          <Link className="header-menu" style={isActive('/contest')} to="/contest">
@@ -94,7 +94,7 @@ const navStyle = () => {
               {!isAuth() && !isTabletOrMobileDevice && (
                   <Fragment>
                           <Link to="/signin" className="header-menu" style={isActive('/signin')}>
-                              SIGIN
+                              SIGN IN
                           </Link>
                           <Link to="/signup" className="header-menu" style={isActive('/signup')}>
                               SIGN UP
@@ -193,11 +193,11 @@ const navStyle = () => {
                     </Link>
                     </div>
                 )}
-                    <div>
+      {/*              <div>
                     <Link to="/voting" className="" style={isActive('/voting')}>
                     <Button block className='drawer-menu-item'>VOTING</Button>
                     </Link>
-                    </div>
+                    </div>*/}
                     <div>
                     <Link to="/about" className="" style={isActive('/about')}>
                     <Button block className='drawer-menu-item'>ABOUT</Button>

@@ -19,7 +19,7 @@ componentDidMount(){
 
   render(){
 
-  // console.log(this.props.data)
+ 
 
   const videoCarousel = () => {
   const video = this.props.data

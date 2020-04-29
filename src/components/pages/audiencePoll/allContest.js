@@ -8,8 +8,8 @@ class AllContest extends Component{
   render(){
     return <div className='outer-audience-poll-container'>
         <Header />
-       
-               <Footer />
+
+        <Footer />
       </div>
   }
 }

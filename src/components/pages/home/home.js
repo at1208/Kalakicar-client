@@ -9,6 +9,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import VideoCarousel from './videoCarousel';
 import Particles from 'react-particles-js';
+import Youtube from './youtubeVideo';
 
 
 class HomePage extends Component {
@@ -24,10 +25,11 @@ class HomePage extends Component {
         standupVideos: [],
         singingVideos: [],
         instrumentalVideos:[],
-        mimicryVideos:[]
+        mimicryVideos:[],
+        youtubeVideos: []
     }
 
- 
+
   }
   componentDidMount(){
     this.videoByCategory('Beat Boxing', "beatBoxingVideos")
@@ -39,6 +41,7 @@ class HomePage extends Component {
     this.videoByCategory('Singing', "singingVideos")
     this.videoByCategory('Instrumental', "instrumentalVideos")
     this.videoByCategory('Mimicry', "mimicryVideos")
+    this.youtubeVideo();
   }
 
 videoByCategory = (category, state) => {
@@ -52,11 +55,19 @@ const key = state
   .catch(err => console.log(err))
 }
 
+youtubeVideo= () => {
+  axios('https://www.googleapis.com/youtube/v3/search?key=AIzaSyDDEjZo14Opq3Y-BT1qgRSZ_vDEEX0Xw_U&channelId=UCnfGHQkVSCFh7_DXG8G39Nw&part=snippet,id&order=date&maxResults=20')
+  .then(result => {
 
+  const videoResult = result.data.items.map(data => `https://www.youtube.com/embed/${data.id.videoId}`);
+  this.setState({ youtubeVideo: videoResult })
+  })
+  .catch(error => console.log(error))
+}
 
 
   render(){
-    console.log(this.state)
+    console.log(this.state.youtubeVideo)
 
     return (
           <div className='home-outer-container'>
@@ -80,6 +91,12 @@ const key = state
 
 
                 <div className='video-content-container'>
+
+                {this.state.youtubeVideo &&   <div className='each-video-carousel'>
+                  <Youtube data={this.state.youtubeVideo} category='youtube'/>
+                  </div>}
+
+
                 {this.state.singingVideos &&   <div className='each-video-carousel'>
                   <VideoCarousel data={this.state.singingVideos} category='Singing'/>
                   </div>}
