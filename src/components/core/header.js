@@ -84,11 +84,11 @@ const navStyle = () => {
                  VOTING
                  </Link>*/}
 
-                 {isAuth()  && !isTabletOrMobileDevice && isAuth().role === 'admin' && (
+                 {/*isAuth()  && !isTabletOrMobileDevice && isAuth().role === 'admin' && (
                          <Link className="header-menu" style={isActive('/contest')} to="/contest">
                             CONTEST
                          </Link>
-                 )}
+                 )*/}
 
 
               {!isAuth() && !isTabletOrMobileDevice && (
@@ -150,7 +150,7 @@ const navStyle = () => {
               )}
 
 
-          {!isAuth() && !isTabletOrMobileDevice && (
+          {/*!isAuth() && !isTabletOrMobileDevice && (
               <div className='social row'>
                       <Link to="/signin" className="social-btn" style={isActive('/signin')}>
                       <Google informParent={informParent}/>
@@ -161,7 +161,7 @@ const navStyle = () => {
                        </Link>
 
               </div>
-          )}
+          )*/}
 
 
 
@@ -234,12 +234,12 @@ const navStyle = () => {
                   )}
             </div>
 
-          {!isAuth() && (
+          {/*!isAuth() && (
             <div className='social-btn'>
             <Google informParent={informParent}/>
             <Facebook informParent={informParent}/>
             </div>
-          )}
+          )*/}
 
           {!isAuth() && <Fragment>
               <div className='row col'>

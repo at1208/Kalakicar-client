@@ -99,6 +99,9 @@
 }
 .each-video-carousel{
   /* margin-top: 40px; */
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   /* background-color: #141414; */
+}
+.react-multi-carousel-list{
+  height: 210px;
 }

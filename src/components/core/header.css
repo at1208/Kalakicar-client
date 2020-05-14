@@ -33,6 +33,9 @@ margin-top: 6px;
  /* background-color: red; */
 
 }
+.antd-btn{
+  width: 100%!important
+}
 .login-drawer-btn{
   background-color: #52C2C8!important;
     color: white!important;
