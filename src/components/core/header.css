@@ -33,9 +33,7 @@ margin-top: 6px;
  /* background-color: red; */
 
 }
-.antd-btn{
-  width: 100%!important
-}
+ 
 .login-drawer-btn{
   background-color: #52C2C8!important;
     color: white!important;
@@ -90,7 +88,7 @@ margin-top: 6px;
 }
 .ant-btn{
   text-align: center;
-  width: 80px;
+  width: 100%;
 }
 button{
   font-size: 13px!important;
